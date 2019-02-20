@@ -5,21 +5,21 @@
 int main()
 {
 
-  int idade;
   char nome[10];
-  int p;
+  int *pIdade;
+  int idade;
 
-  *p = idade;
+  pIdade = &idade;
+
+
 
   scanf("%s\n", nome);
-  scanf("%s\n", idade);
+  scanf("%s\n", pIdade);
   printf("%s\n", nome);
-  printf("%s\n", idade);
+  printf("%s\n", *pIdade);
 
-  printf("Informe sua Idade : ");
-  scanf("%i", &idade);
-  if(idade > 18){
-    printf("Maior de idade");
+  if(idade >= 18){
+    printf("Maior de idade\n");
   }else{
     printf("Menor de Idade\n");
   }
